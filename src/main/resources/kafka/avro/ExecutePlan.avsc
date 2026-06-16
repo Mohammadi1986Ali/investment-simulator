@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "ExecutePlan",
+  "namespace": "com.bux.ivp.infrastructure.kafka.command",
+  "doc": "Command to execute an investment plan for a given date. Topic: ivp-commands. Sent by: Scheduler.",
+  "fields": [
+    {
+      "name": "planId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      },
+      "doc": "Identifier of the plan to execute."
+    },
+    {
+      "name": "executionDate",
+      "type": {
+        "type": "int",
+        "logicalType": "date"
+      },
+      "doc": "Date the plan is executed for."
+    }
+  ]
+}
+

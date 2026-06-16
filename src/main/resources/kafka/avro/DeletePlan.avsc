@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "DeletePlan",
+  "namespace": "com.bux.ivp.infrastructure.kafka.command",
+  "doc": "Command to delete an existing investment plan. Topic: ivp-commands. Sent by: API Service.",
+  "fields": [
+    {
+      "name": "planId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      },
+      "doc": "Identifier of the plan to delete."
+    }
+  ]
+}
+

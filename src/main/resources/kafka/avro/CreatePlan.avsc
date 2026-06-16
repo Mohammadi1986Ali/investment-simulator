@@ -1,0 +1,49 @@
+{
+  "type": "record",
+  "name": "CreatePlan",
+  "namespace": "com.bux.ivp.infrastructure.kafka.command",
+  "doc": "Command to create a new investment plan.",
+  "fields": [
+    {
+      "name": "userId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      },
+      "doc": "Identifier of the user that owns the plan."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "doc": "Human-readable plan name."
+    },
+    {
+      "name": "investments",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "PlanInvestment",
+          "fields": [
+            {
+              "name": "instrument",
+              "type": "string",
+              "doc": "Investment instrument identifier."
+            },
+            {
+              "name": "amount",
+              "type": "double",
+              "doc": "Amount to invest."
+            }
+          ]
+        }
+      },
+      "doc": "Instrument allocations that make up the plan."
+    },
+    {
+      "name": "executionDay",
+      "type": "int",
+      "doc": "Day of month the plan is executed on."
+    }
+  ]
+}

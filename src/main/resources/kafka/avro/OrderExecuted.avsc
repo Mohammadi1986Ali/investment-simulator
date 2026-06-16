@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "OrderExecuted",
+  "namespace": "com.bux.ivp.infrastructure.kafka.event",
+  "fields": [
+    {
+      "name": "orderId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    }
+  ]
+}

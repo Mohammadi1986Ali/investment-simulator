@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "OrderFailed",
+  "namespace": "com.bux.ivp.infrastructure.kafka.event",
+  "fields": [
+    {
+      "name": "orderId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "reason",
+      "type": "string"
+    }
+  ]
+}
